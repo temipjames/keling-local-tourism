@@ -1,69 +1,83 @@
-import Image from "next/image";
+import DestinationCard from "@/components/DestinationCard";
+import { destinations } from "@/data/destinations";
+import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
+  const popularSpots = destinations.filter(
+    (item) => item.category === "popular",
+  );
+  const historySpots = destinations.filter(
+    (item) => item.category === "history",
+  );
+  const natureSpots = destinations.filter((item) => item.category === "nature");
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="flex flex-col items-center min-h-screen w-full">
+      {/* Hero SEction */}
+      <HeroSection src="/images/cover_image_7_cropped.jpg" alt="KelingKeling Cover" />
+      {/* Section 1 */}
+      <section className="w-full pb-6 mb-6">
+        <h2 className="pb-2 px-4 drop-shadow-lg text-center text-2xl lg:text-4xl font-heading font-bold uppercase tracking-wide text-indigo">
+          <span className="text-saffron">Discover</span> Popular Sites
+        </h2>
+        <p className="max-w-2xl pb-2 px-4 mx-auto text-center text-indigo text-sm md:text-base">
+          Explore the most iconic landmarks and must-see destinations across the
+          Smiling Coast. From bustling city centers to serene coastal retreats,
+          there are the locations ever traveler loves.
+        </p>
+        <div className="relative w-full">
+          <div className="w-full py-4 overflow-x-auto scroll-smooth no-scrollbar">
+            <div className="px-4 flex gap-4 w-max mx-auto">
+              {popularSpots.map((item) => (
+                <DestinationCard key={item.id} item={item} />
+              ))}
+            </div>
+          </div>
+          <div className="absolute top-0 right-0 w-10 h-full bg-gradient-to-r from-transparent to-sand z-10 pointer-events-none" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+      {/* Section 2 */}
+      <section className="w-full pb-6 mb-6">
+        <h2 className="pb-2 px-4 drop-shadow-lg text-center text-2xl lg:text-4xl font-heading font-bold uppercase tracking-wide text-indigo">
+          <span className="text-saffron">Explore</span> History & Culture
+        </h2>
+        <p className="max-w-2xl pb-2 px-4 mx-auto text-center text-indigo text-sm md:text-base">
+          Uncover the deep-rooted heritage and vibrant traditions that shape the
+          Gambian way of life. Visit ancient monuments and local museums to
+          journey through the stories of our past.
+        </p>
+        <div className="relative w-full">
+          <div className="w-full py-4 overflow-x-auto scroll-smooth no-scrollbar">
+            <div className="px-4 flex gap-4 w-max mx-auto">
+              {historySpots.map((item) => (
+                <DestinationCard key={item.id} item={item} />
+              ))}
+            </div>
+          </div>
+          <div className="absolute top-0 right-0 w-12 h-full bg-gradient-to-r from-transparent to-sand z-10 pointer-events-none" />
         </div>
-      </main>
+      </section>
+      {/* Section 3 */}
+      <section className="w-full pb-6 mb-6">
+        <h2 className="pb-2 px-4 drop-shadow-lg text-center text-2xl lg:text-4xl font-heading font-bold uppercase tracking-wide text-indigo">
+          <span className="text-saffron">Experience</span> Nature & Wildlife
+        </h2>
+        <p className="max-w-2xl pb-2 px-4 mx-auto text-center text-indigo text-sm md:text-base">
+          Immerse yourself in lush tropical forests and witness exotic animals
+          in their natural habitats. From rare birds to playful primates,
+          discover the incredible biodiversity that makes our region unique.
+        </p>
+        <div className="relative w-full">
+          <div className="w-full py-4 overflow-x-auto scroll-smooth no-scrollbar">
+            <div className="px-4 flex gap-4 w-max mx-auto">
+              {natureSpots.map((item) => (
+                <DestinationCard key={item.id} item={item} />
+              ))}
+            </div>
+          </div>
+          <div className="absolute top-0 right-0 w-12 h-full bg-gradient-to-r from-transparent to-sand z-10 pointer-events-none" />
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Keling - Local Tourism Web Application
 
-## Getting Started
+A personal project built to re-engineer the [original static HTML Keling tourism website](https://github.com/temipjames/keling-static-html) into a full-stack application using the Next.js framework.
 
-First, run the development server:
+## Project Overview
+This project is part of my personal learning journey to transition from vanilla web development (plain HTML, CSS and JS) to production-grade, full-stack web development using modern industry standards and frameworks. The application showcases a clean local narrative promoting tourism, culture, and attractions along the Gambian coast.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+* **Modern App Architecture:** Built with the Next.js App Router for optimised page routing and server-side rendering capabilities.
+* **Component-Driven Design:** Utilises clean component structures for modularity and reusability.
+* **Type Safety:** Built with TypeScript to define explicit data models, for catching errors during compilation and ensuring data integrity.
+* **Advanced Styling & Layouts:** Styled entirely with **Tailwind CSS v4** and utilizes CSS grid areas to build a responsive Bento box gallery layout.
+* **Performance Optimization:** Implements Next.js image optimization techniques to load image at higher speeds.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
+* Next.js (App Router)
+* TypeScript
+* Tailwind CSS v4
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
+*Note: This repository represents the Next.js version of the Keling tourism project. The original static HTML/CSS version focusing on Flexbox and Grid without JavaScript can be found in the [keling-static-html](https://github.com/temipjames/keling-static-html) repository.*
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
