@@ -1,6 +1,6 @@
-# Keling - Local Tourism Website
+# KelingKeling - Local Tourism Website
 
-A personal project built to re-engineer the [original static HTML Keling tourism website](https://github.com/temipjames/keling-static-html) into a full-stack application using the Next.js framework.
+A personal project built to migrate and re-engineer the [original static HTML Keling tourism website](https://github.com/temipjames/keling-static-html) into a full-stack application using the Next.js framework.
 
 ## Project Overview
 This project is part of my personal learning journey to transition from vanilla web development (plain HTML, CSS and JS) to production-grade, full-stack web development using modern industry standards and frameworks. The application showcases a clean local narrative promoting tourism, culture, and attractions along the Gambian coast.
