@@ -14,7 +14,7 @@ function HeroSection(image: HeroSectionProps) {
         fill
         sizes="100vw"
         priority
-        className="object-cover object-[50%_15%] absolute inset-0 animate-hero-zoo"
+        className="object-cover object-[50%_15%] absolute inset-0 animate-hero-zoom"
       />
       <div className="absolute bottom-0 left-0 w-full h-37.5 bg-gradient-to-b from-transparent to-sand z-10" />
     </div>
